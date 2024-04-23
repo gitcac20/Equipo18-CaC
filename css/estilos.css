@@ -1,0 +1,333 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  font-family: "ubuntu", sans-serif;
+  --rojo: #9f3647;
+  --texto-blanco: #ffffff;
+  --fondo-negro: black;
+  --fondo-blanco: white;
+}
+
+/*fuentes*/
+
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-light-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ubuntu-regular-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-medium-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ubuntu-bold-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/*rem es relativo al root
+el font-size es por defecto de 16 px.
+entonces = 2rem -->2* 16px = 32px */
+body {
+  background-color: var(--fondo-negro) !important;
+}
+
+h2 {
+  color: white;
+}
+.texto-blanco {
+  color: var(--texto-blanco);
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  background-color: var(--rojo);
+  font-size: 19px;
+  padding-top: 2vh;
+  height: 8vh;
+  width: 98.5vw;
+  min-height: 60px;
+  padding-bottom: 2vh;
+  display: flex;
+  justify-content: space-between;
+
+}
+.header_logo {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;  
+
+}
+
+.iniciar_sesion_btn {
+  background-color: black;
+  color: white;
+  padding: 0.4rem;
+  text-decoration: none;
+}
+
+.main_btn_registrarse {
+  width: 5vw;
+  min-width: 15vw;
+  height: 9vh;
+  min-height: 50px;
+  margin-top: 5vh;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: 700;
+  background-color: var(--rojo);
+  color: var(--texto-blanco);
+
+  text-decoration: none;
+}
+
+.main_btn_registrarse:hover {
+  transform: scale(1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  
+}
+/* ESPECIFICIDAD
+Inline > id > clase >tipo
+Importtant*/
+.main {
+  background-color: var(--fondo-negro);
+  background-image: linear-gradient(to right top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../imgs/banner-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh; /* vh altura relativa */
+  width: 98.5vw; /* vw ancho relativo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 400px;
+}
+
+.main h1 {
+  font-size: 3rem; /*3 * 16px*/
+  padding-top: 20vh;
+  display: flex;
+  text-wrap: wrap;
+  width:50vw;
+
+}
+
+.main h2 {
+  font-size: 2rem;
+  padding-top: 5vh;
+  font-weight: 300;
+  display: flex;
+  text-wrap: wrap;
+  width: 32.9vw;
+}
+.main_titulo {
+  padding-top: 20vh;
+  padding-bottom: 5vh;
+  font-size: 3em; /*unidad de medidad relativa */
+}
+.main_subtitulo {
+  margin-bottom: 5vh;
+}
+
+.header_menu a:hover {
+  background-color: var(--color-primario);
+  background-origin: inherit;
+  /*border: 1px solid var(--fondo-negro);*/
+  box-shadow: 1px 1px 1px 1px var(--fondo-negro);
+  padding: 0.2rem;
+}
+
+.header_menu a {
+  text-decoration: none;
+  color: var(--texto-blanco);
+  font-size: 1em;
+  border-radius: 5px;
+  margin: 0.4rem;
+  
+}
+.header_logo a {
+  color: var(--texto-blanco);
+  padding-left: 1vw;
+  padding-right: 1vw;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-decoration: none;
+}
+.header_logo h3 {
+  font-weight: 100;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-top: 0.3rem;
+  margin-left: 0.3rem;
+}
+
+.busqueda {
+  text-align: center;
+  color: var(--texto-blanco);
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4vw;
+  margin-bottom: 3vw;
+}
+.tendencias-pelis {
+  color: var(--texto-blanco);
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.h2 form {
+  padding-top: 5vh;
+}
+.input_search {
+  padding: 1vw 3vh;
+  text-transform: capitalize;
+  border-radius: 25px;
+  width: 50vw;
+  border: none;
+  outline: none;
+  /*tph sacar borde ccuando hago foco*/
+}
+.button_search {
+  padding: 1vw 3vh;
+  text-transform: capitalize;
+  border-radius: 25px;
+  border: 2px solid var(--texto-blanco);
+  background-color: var(--rojo);
+  color: var(--texto-blanco);
+  font-size: 1rem;
+  font-weight: bold;
+}
+.button_search:hover {
+  font-size: 1.1rem;
+}
+hr {
+  margin: 4rem !important;
+  border: none;
+  border-top: 1px solid var(--rojo);
+}
+
+.elemento-fijo {
+  position: fixed;
+  color:var(--texto-blanco);
+  bottom: 5vh;
+  right:5vh;
+}
+.contenedor-peliculas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+}
+.peli-imagen {
+  max-width: 90%;
+  border-radius: 1rem;
+}
+
+.peli-imagen:hover{
+    transition: transform 0.4s ease-in-out;    
+    transform: scale(1.1);
+}
+.texto-pelis{
+    margin-top: 1rem;
+}
+
+.titulo-tendencias {
+  margin: 3rem;
+}
+.pelis {
+  position: relative;
+}
+
+.botones_antSig {
+  border-color: #ffffff;
+  background-color: var(--rojo);
+  color: var(--texto-blanco);
+  border-radius: 2rem;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+.buttons {
+  height: auto;
+  display: flex;
+
+  width: 18vw;
+  gap: 1rem;
+  margin: auto;
+}
+footer {
+  display: flex;
+  background-color: var(--rojo);
+  padding-top: 0.4rem;
+  height: 11vh;
+  width: 98.5vw;
+  min-height: 60px;
+}
+.footer-texto {
+  display: flex;
+  margin: auto;
+  max-width: 600rem;
+
+  gap: 20px;
+}
+.footer-texto a {
+  text-decoration: none;
+  color: var(--texto-blanco);
+  display: flex;
+  font-size: 19px;
+  padding: 10px;
+  border-radius: 7px;
+}
+.button-adm {
+  background-color: var(--fondo-negro);
+}
+
+.carousel-item img {
+  width: 15vw;
+  margin: 1.5rem;
+}
