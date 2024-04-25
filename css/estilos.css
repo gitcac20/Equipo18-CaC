@@ -120,15 +120,14 @@ h2 {
   font-weight: 700;
   background-color: var(--rojo);
   color: var(--texto-blanco);
-
   text-decoration: none;
 }
 
 .main_btn_registrarse:hover {
   transform: scale(1);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  
 }
+
 /* ESPECIFICIDAD
 Inline > id > clase >tipo
 Importtant*/
@@ -165,11 +164,13 @@ Importtant*/
   text-wrap: wrap;
   width: 32.9vw;
 }
+
 .main_titulo {
   padding-top: 20vh;
   padding-bottom: 5vh;
   font-size: 3em; /*unidad de medidad relativa */
 }
+
 .main_subtitulo {
   margin-bottom: 5vh;
 }
@@ -188,8 +189,8 @@ Importtant*/
   font-size: 1em;
   border-radius: 5px;
   margin: 0.4rem;
-  
 }
+
 .header_logo a {
   color: var(--texto-blanco);
   padding-left: 1vw;
@@ -198,6 +199,7 @@ Importtant*/
   font-weight: 700;
   text-decoration: none;
 }
+
 .header_logo h3 {
   font-weight: 100;
   font-size: 1.1em;
@@ -215,15 +217,18 @@ Importtant*/
   margin-top: 4vw;
   margin-bottom: 3vw;
 }
+
 .tendencias-pelis {
   color: var(--texto-blanco);
   text-align: center;
   font-size: 1.5rem;
   margin-top: 1rem;
 }
+
 .h2 form {
   padding-top: 5vh;
 }
+
 .input_search {
   padding: 1vw 3vh;
   text-transform: capitalize;
@@ -231,7 +236,7 @@ Importtant*/
   width: 50vw;
   border: none;
   outline: none;
-  /*tph sacar borde ccuando hago foco*/
+
 }
 .button_search {
   padding: 1vw 3vh;
@@ -243,9 +248,11 @@ Importtant*/
   font-size: 1rem;
   font-weight: bold;
 }
+
 .button_search:hover {
   font-size: 1.1rem;
 }
+
 hr {
   margin: 4rem !important;
   border: none;
@@ -258,11 +265,13 @@ hr {
   bottom: 5vh;
   right:5vh;
 }
+
 .contenedor-peliculas {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 5rem;
 }
+
 .peli-imagen {
   max-width: 90%;
   border-radius: 1rem;
@@ -272,6 +281,7 @@ hr {
     transition: transform 0.4s ease-in-out;    
     transform: scale(1.1);
 }
+
 .texto-pelis{
     margin-top: 1rem;
 }
@@ -279,6 +289,7 @@ hr {
 .titulo-tendencias {
   margin: 3rem;
 }
+
 .pelis {
   position: relative;
 }
@@ -300,6 +311,7 @@ hr {
   gap: 1rem;
   margin: auto;
 }
+
 footer {
   display: flex;
   background-color: var(--rojo);
@@ -308,13 +320,14 @@ footer {
   width: 98.5vw;
   min-height: 60px;
 }
+
 .footer-texto {
   display: flex;
   margin: auto;
   max-width: 600rem;
-
   gap: 20px;
 }
+
 .footer-texto a {
   text-decoration: none;
   color: var(--texto-blanco);
@@ -323,6 +336,7 @@ footer {
   padding: 10px;
   border-radius: 7px;
 }
+
 .button-adm {
   background-color: var(--fondo-negro);
 }
@@ -331,3 +345,144 @@ footer {
   width: 15vw;
   margin: 1.5rem;
 }
+
+/* Pantallas pequeñas (teléfonos) */
+@media screen and (max-width: 669px) {
+  .header {
+    height: initial;
+    margin-left: 3px;
+    margin-right: 6px;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .header_logo {
+    font-size: 1rem;
+    font-weight: 700;
+    flex-direction: column;
+  }
+
+  .header_menu {
+   font-weight: 500;
+   font-size: 1.2rem;
+   padding: 0.3rem;
+   text-align: center;
+  }
+
+  h1.main_titulo{
+    font-size: 2.3rem;
+    padding-top: 12vh;
+  }
+
+  h2.main_subtitulo {
+    font-size: 1.3rem;
+    padding-top: 3vh;
+  }
+
+  .main_btn_registrarse {
+    font-size: 1rem;
+    width: 7vw;
+    min-width: 25vw;
+  }
+  
+  .busqueda {
+    margin-top: 6vw;
+    margin-bottom: 4vw;
+  }
+
+  .input_search {
+    padding: 0.8vw 4vh;
+    font-size: 1rem;
+    height: 38px;
+  }
+
+  .button_search {
+   padding: 0.5vw 2.5vh;
+   font-size: 1rem;
+   height: 32px;
+  }
+
+  .titulo-tendencias {
+   font-size: 2.5rem;
+   padding-top: 0.5vw;
+  }
+
+  .contenedor-peliculas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  div.titulo-aclamadas {
+    font-size: 2.5rem;
+  }
+  
+  #carouselExampleRide {
+    width: 100vw;
+  }
+
+  .carousel-item img {
+    width: 30vw;
+    margin: 1.2rem;
+  }
+}
+
+
+/* Pantallas medianas (tabletas) */
+@media screen and (max-width: 799px) {
+  .footer {
+    height: initial;
+    padding-top: 18px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+
+  .footer-texto {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+    padding: 5px;
+  }
+  
+}
+
+@media screen and  (min-width: 670px) and (max-width: 1020px) {
+
+  h1.main_titulo{
+    font-size: 2.8rem;
+    padding-top: 12vh;
+  }
+
+  h2.main_subtitulo {
+    font-size: 1.7rem;
+    padding-top: 3vh;
+  }
+
+  .main_btn_registrarse {
+    font-size: 1rem;
+    width: 7vw;
+    min-width: 25vw;
+  }
+
+  .contenedor-peliculas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+    font-size: 1.5rem;
+  }
+
+  div.titulo-aclamadas {
+    font-size: 3rem;
+  }
+  
+  #carouselExampleRide {
+    width: 105vw;
+  }
+
+  .carousel-item img {
+    width: 25vw;
+    margin: 1rem;
+  } 
+}
+
